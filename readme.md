@@ -6,7 +6,7 @@ The EmailOne SDK for php enables developers to easily work with EmailOne.
 
 1. To get started, download this SDK and upload it to your server.
 2. Open /examples/setup.php.
-3. In the following code, insert your public and private api key, available here: [http://www.emailone.net/customers/api-keys/index]
+3. In the following code, insert your public and private api key, available [here](http://www.emailone.net/customers/api-keys/index)
 
 ```
 $config = new EmailOneApi_Config(array(
@@ -21,5 +21,5 @@ $config = new EmailOneApi_Config(array(
     ),
 ));
 ```
-4. See the examples in the /examples directory for usage.
+See the examples in the [wiki](https://github.com/smallfri/EmailOne-SDK) for more information.
 

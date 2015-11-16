@@ -26,7 +26,7 @@ echo '</pre>';
 /*===================================================================================*/
 
 // GET ONE ITEM
-$response = $endpoint->getTemplate('TEMPLATE-UNIQUE-ID');
+$response = $endpoint->getTemplate('mh699wp8dde01');
 
 // DISPLAY RESPONSE
 echo '<hr /><pre>';
