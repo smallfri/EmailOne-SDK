@@ -10,7 +10,7 @@ ini_set('display_errors', 1);
  */
  
 // require the setup which has registered the autoloader
-require_once dirname(__FILE__) . '/emailone-php-sdk/setup.php';
+require_once dirname(__FILE__) . '/setup.php';
 
 // see if the request is made via ajax.    
 $isAjaxRequest = !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest';
@@ -49,12 +49,12 @@ if ($isAjaxRequest && !empty($_POST)) {
 	<meta http-equiv="content-type" content="text/html" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Noto+Sans:700italic" />
-    <link rel="stylesheet" type="text/css" href="http://www.emailone.com/backend/assets/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="http://www.emailone.com/backend/assets/css/bootstrap-glyphicons.css" />
-    <link rel="stylesheet" type="text/css" href="http://www.emailone.com/backend/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.emailone.net/api/assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.emailone.net/api/assets/css/bootstrap-glyphicons.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.emailone.net/api/assets/css/style.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://www.emailone.com/backend/assets/js/bootstrap.js" id="script-bootstrap"></script>
-    <link rel="shortcut icon" href="http://www.emailone.com/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="http://www.emailone.net/api/assets/js/bootstrap.js" id="script-bootstrap"></script>
+    <link rel="shortcut icon" href="http://www.emailone.net/favicon.ico" type="image/x-icon" />
 	<title>Ajax subscribe</title>
     <style>
     #content {
@@ -115,7 +115,7 @@ if ($isAjaxRequest && !empty($_POST)) {
             $.post('', $this.serialize(), function(json){
                 $('.btn-submit').button('reset');
                 $message.text(json.message).show();
-                
+                alert(json.message);
                 // if the status is success, add the success class.
                 if (json.status == 'success') {
                     $message.addClass('success');
