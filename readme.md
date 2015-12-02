@@ -21,5 +21,5 @@ $config = new EmailOneApi_Config(array(
     ),
 ));
 ```
-See the examples in the [wiki](https://github.com/smallfri/EmailOne-SDK) for more information.
+See the examples in the [wiki](https://github.com/smallfri/EmailOne-SDK/wiki) for more information.
 
